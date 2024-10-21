@@ -5,15 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #9c774c, #7B3A2F);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            background-color: rgba(255, 245, 230, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+            border: 1px solid #C68642;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            color: #5A3E36;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #C68642;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(198, 134, 66, 0.8);
+            background-color: #FFF3E0;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8B5E3C;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #703D2B;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            section {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section>
-        <form action="cad.php" method="get"></form>
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="idnome">
-        <label for="sobrenome">Sobrenome</label>
-        <input type="text" name="sobrenome" id="idsobrenome">
-        <input type="submit" value="Enviar">
+        <form action="cad.php" method="get">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="idnome">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="idsobrenome">
+            <input type="submit" value="Enviar">
+        </form>
     </section>
 </body>
 
